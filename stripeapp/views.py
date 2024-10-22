@@ -43,8 +43,8 @@ def create_checkout(request):
                     'quantity': 1,
                 }],
                 mode='payment',
-                success_url=request.build_absolute_uri(reverse('success')),
-                cancel_url=request.build_absolute_uri(reverse('cancel')),
+                success_url="http://127.0.0.1:8000/success",
+                cancel_url="http://127.0.0.1:8000/cancel",
             )
 
             payment = Payment.objects.create(
